@@ -1,53 +1,43 @@
 <?php
 
+use yii\helpers\Html;
+use yii\bootstrap\ActiveForm;
+use app\models\Feedback;
+
 /* @var $this yii\web\View */
+/* @var $feedback app\models\Feedback */
 
-$this->title = 'My Yii Application';
+//$this->title = 'My Yii Application';
 ?>
-<div class="site-index">
-
-    <div class="jumbotron">
-        <h1>Congratulations!</h1>
-
-        <p class="lead">You have successfully created your Yii-powered application.</p>
-
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">Контактная форма</h3>
     </div>
-
-    <div class="body-content">
-
+    <div class="panel-body">
         <div class="row">
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/">Yii Documentation &raquo;</a></p>
+            <div class="col-md-6">
+                <p>
+                    Соображения высшего порядка, а также консультация с профессионалами из IT требует от нас анализа
+                    направлений прогрессивного развития! Равным образом постоянный количественный рост и сфера нашей
+                    активности позволяет выполнить важнейшие задания по разработке модели развития! Значимость этих
+                    проблем настолько очевидна, что повышение уровня гражданского сознания играет важную роль в
+                    формировании новых предложений.
+                </p>
+                <p>
+                    Повседневная практика показывает, что постоянное информационно-техническое обеспечение нашей
+                    деятельности в значительной степени обуславливает создание позиций, занимаемых участниками в
+                    отношении поставленных задач. Практический опыт показывает, что начало повседневной работы по
+                    формированию позиции обеспечивает широкому кругу специалистов участие в формировании экономической
+                    целесообразности принимаемых решений. Значимость этих проблем настолько очевидна, что сложившаяся
+                    структура организации требует определения и уточнения системы обучения кадров, соответствующей
+                    насущным потребностям?
+                </p>
             </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Yii Forum &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">Yii Extensions &raquo;</a></p>
+            <div class="col-md-6">
+                <div class="well well-sm">
+                    <?php echo $this->render('_feedback_form', ['model' => $feedback]) ?>
+                </div>
             </div>
         </div>
-
     </div>
 </div>

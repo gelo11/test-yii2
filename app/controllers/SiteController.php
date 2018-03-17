@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\Feedback;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
@@ -9,6 +10,7 @@ use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use yii\widgets\ActiveForm;
 
 class SiteController extends Controller
 {
@@ -61,7 +63,32 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        return $this->render('index', [
+            'feedback' => new Feedback()
+        ]);
+    }
+
+    public function actionFeedback()
+    {
+        $model = new Feedback();
+        $request = Yii::$app->getRequest();
+        if ($request->isPost && $model->load($request->post())) {
+            Yii::$app->response->format = Response::FORMAT_JSON;
+            return ['success' => $model->save()];
+        }
+        return $this->renderAjax('_feedback_form', [
+            'model' => $model,
+        ]);
+    }
+
+    public function actionValidateFeedback()
+    {
+        $model = new Feedback();
+        $request = Yii::$app->getRequest();
+        if ($request->isPost && $model->load($request->post())) {
+            Yii::$app->response->format = Response::FORMAT_JSON;
+            return ActiveForm::validate($model);
+        }
     }
 
     /**
