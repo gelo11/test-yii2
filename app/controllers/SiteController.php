@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\Action;
 use app\models\Feedback;
 use app\models\News;
 use Yii;
@@ -67,6 +68,7 @@ class SiteController extends Controller
         return $this->render('index', [
             'feedback' => new Feedback(),
             'news' => News::findLatest(),
+            'actions' => Action::findLatest(),
         ]);
     }
 

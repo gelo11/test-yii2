@@ -49,3 +49,4 @@ use app\models\Feedback;
     активизации! Равным образом консультация с профессионалами из IT напрямую зависит от новых предложений?
 </div>
 <?php echo $this->render('_latest_news', ['news' => $news]) ?>
+<?php echo $this->render('_latest_actions', ['actions' => $actions]) ?>
