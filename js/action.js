@@ -30,13 +30,15 @@ var actionTab = (function () {
         actionSwitch(url);
     }
 
-    window.onpopstate = function (event) {
+    var actionHistory = function () {
         if (window.location.pathname == '/action/view') {
             $('.latest-action-link.active').removeClass('active');
             var url = window.location.pathname + window.location.search;
             actionSwitch(url);
         }
     }
+
+    window.addEventListener("popstate", actionHistory);
 
     var init = function () {
         bindFunctions();

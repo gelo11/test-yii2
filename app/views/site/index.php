@@ -41,7 +41,8 @@ use app\models\Feedback;
         </div>
     </div>
 </div>
-<div class="well">С другой стороны сложившаяся структура организации играет важную роль в формировании модели развития!
+<div class="well" id="about">С другой стороны сложившаяся структура организации играет важную роль в формировании модели
+    развития!
     Таким образом, постоянный количественный рост и сфера нашей активности позволяет оценить значение существующих
     финансовых и административных условий. Практический опыт показывает, что реализация намеченного плана развития
     требует от нас системного анализа системы масштабного изменения ряда параметров! Таким образом, курс на
@@ -50,3 +51,52 @@ use app\models\Feedback;
 </div>
 <?php echo $this->render('_latest_news', ['news' => $news]) ?>
 <?php echo $this->render('_latest_actions', ['actions' => $actions]) ?>
+<div class="panel panel-default" id="contacts">
+    <div class="panel-heading">
+        <h3 class="panel-title">Контактная форма</h3>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <?php
+                        echo \yii\bootstrap\Nav::widget([
+                            'options' => ['class' => 'nav-pills nav-stacked'],
+                            'items' => [
+                                ['label' => 'Home', 'url' => '#wrapper'],
+                                ['label' => 'About', 'url' => '#about'],
+                                ['label' => 'News', 'url' => '#latest_news'],
+                                ['label' => 'Actions', 'url' => '#latest_actions'],
+                                ['label' => 'Contact', 'url' => '#contacts'],
+                            ],
+                        ]);
+                        ?>
+                    </div>
+                    <div class="col-sm-6">
+                        <?php
+                        echo \yii\bootstrap\Nav::widget([
+                            'options' => ['class' => 'nav-pills nav-stacked'],
+                            'items' => [
+                                ['label' => 'Home', 'url' => '#wrapper'],
+                                ['label' => 'About', 'url' => '#about'],
+                                ['label' => 'News', 'url' => '#latest_news'],
+                                ['label' => 'Actions', 'url' => '#latest_actions'],
+                                ['label' => 'Contact', 'url' => '#contacts'],
+                            ],
+                        ]);
+                        ?>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="jumbotron well">Значимость этих проблем настолько очевидна, что сложившаяся структура организации
+                    позволяет выполнить важнейшие задания по разработке ключевых компонентов планируемого обновления.
+                    Дорогие друзья, повышение уровня гражданского сознания обеспечивает широкому кругу специалистов
+                    участие в формировании модели развития. Задача организации, в особенности же дальнейшее развитие
+                    различных форм деятельности требует от нас системного анализа новых предложений.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

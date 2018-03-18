@@ -1,4 +1,4 @@
-<div class="panel panel-dark panel-latest-actions">
+<div class="panel panel-dark panel-latest-actions" id="latest_actions">
     <div class="panel-body">
         <div class="row">
             <div class="col-md-9">

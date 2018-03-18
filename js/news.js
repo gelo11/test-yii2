@@ -30,13 +30,15 @@ var newsTab = (function () {
         newsSwitch(url);
     }
 
-    window.onpopstate = function (event) {
+    var newsHistory = function () {
         if (window.location.pathname == '/news/view') {
             $('.latest-news-link.active').removeClass('active');
             var url = window.location.pathname + window.location.search;
             newsSwitch(url);
         }
     }
+
+    window.addEventListener("popstate", newsHistory);
 
     var init = function () {
         bindFunctions();
