@@ -5,7 +5,9 @@
         </a>
     </div>
     <div class="media-body">
-        <h4 class="media-heading"><strong><?= $model->title ?></strong></h4>
+        <h4 class="media-heading">
+            <a href="<?= \yii\helpers\Url::to(['news/view', 'id' => $model->id]) ?>"><strong><?= $model->title ?></strong></a>
+        </h4>
         <?= $model->short ?>
     </div>
 </div>

@@ -16,9 +16,3 @@
         </div>
     </div>
 </div>
-<?php
-$this->registerJs(<<<JS
-$('.latest-news-link').eq(0).trigger('click');
-JS
-    , yii\web\View::POS_END, 'latest-news-handler'
-);
