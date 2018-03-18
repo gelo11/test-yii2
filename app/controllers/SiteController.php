@@ -3,6 +3,7 @@
 namespace app\controllers;
 
 use app\models\Feedback;
+use app\models\News;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
@@ -64,7 +65,8 @@ class SiteController extends Controller
     public function actionIndex()
     {
         return $this->render('index', [
-            'feedback' => new Feedback()
+            'feedback' => new Feedback(),
+            'news' => News::findLatest(),
         ]);
     }
 

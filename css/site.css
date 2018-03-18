@@ -113,3 +113,11 @@ a.desc:after {
 .nav > li > form > button.logout:focus {
     outline: none;
 }
+
+.panel-dark{
+    border-color: #000;
+}
+
+.panel-latest-news .media-heading {
+    margin-bottom: 25px;
+}
